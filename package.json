@@ -1,0 +1,20 @@
+
+{
+  "name": "moveit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch ./scss/style.scss ./css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "saas": "^1.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.83.4"
+  }
+}

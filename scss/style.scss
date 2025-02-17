@@ -1,0 +1,486 @@
+// Custom.scss
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+
+// Include any default variable overrides here (though functions won't be available)
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.inter-unique{
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: weight 700.0;
+*
+* available axes:
+'weight' (range from 200.0 to 700.0
+*/
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200 700; 
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLFj_Z1JlFc-K.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'ClashDisplay-Variable';
+    src: url('../fonts/clash-display/fonts/ClashDisplay-Variable.woff2') format('woff2'),
+         url('../fonts/clash-display/fonts/ClashDisplay-Variable.woff') format('woff'),
+         url('../fonts/clash-display/fonts/ClashDisplay-Variable.ttf') format('truetype');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'ClashDisplay-Variable', 'Inter-unique', sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    width: 100%;
+}
+.top-section{
+    background-image: url('../assets/images/noisy-gradients.png');
+    height: 637px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+    .top-section {
+        background-image: none;
+        background-color: #cdfbcc; // Add a suitable background color
+        height: auto; // Adjust height for mobile devices
+        padding-bottom: 0.5rem;
+    }
+}
+.brand-img{
+    width: 41px;
+    height: 41px; 
+}
+.brand-name{
+    color: var(--Secondary-color-Normal, #151E25);
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    margin-left: 12px;
+}
+.dropdown-item:hover{
+    background-color: #97f37d;
+}
+.btn-get-started{
+    color: #49BD49;
+}
+.btn-get-started:hover{
+    color: #ffffff;
+    background-color: #49BD49 !important;
+}
+.hero-section{
+    margin-top: 103px;
+    height: auto;
+}
+.hero-section{
+    .ht-experience, .ht-with{
+        color: var(--Secondary-color-Normal, #151E25);
+        font-family: "ClashDisplay-Variable";
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 45.6px */
+        text-transform: capitalize;
+    }
+    .ht-lightning{
+        color: var(--Secondary-color-Normal, #151E25);
+        font-family: "ClashDisplay-Variable";
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        text-transform: capitalize;
+    }
+    .ht-moveit{
+        color: var(--primary-color-normal-hover, #49BD49);
+        font-family: "ClashDisplay-Variable";
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        text-transform: capitalize;
+    }
+    p{
+        margin-top: 0.5rem;
+        color: var(--grey-dark-hover, #7A7A7A);
+        font-family: Inter-unique;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+    }
+    input[type="text"]{
+        border: none;
+        padding: 3px;
+    }
+    @media (max-width: 992px){
+        input[type="text"]::placeholder {
+            content: 'Enter tracking Number';
+        }
+    }
+    input[type="button"]{
+        font-family: ClashDisplay-Variable;
+        padding: 12px 24px;
+        border-radius: 12px;
+        background-color: #49BD49;
+        color: #E8E9E9;
+        text-align: center;
+        font-weight: 600;
+        }
+    input[type="text"]:focus{
+            outline: none;
+            border: none;
+        }
+}
+.tracking-search{
+    display: flex;
+    margin-top: 60px;
+    padding: 8px 8px 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    border: 1px solid var(--primary-color-normal-hover, #49BD49);
+    background: var(--Light-Color-White, #FFF);
+}
+
+// Booking Section
+
+.booking-section{
+    background: var(--Secondary-color-Normal, #151E25);
+    color: #49BD49;
+}
+.booking-section{
+    h1{
+        color: #FFF;
+        font-family: "ClashDisplay-Variable";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 38.4px */
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+    label{
+        color: var(--primary-color-normal-hover, #49BD49);
+        font-family: ClashDisplay-Variable;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 21.6px */
+        margin-bottom: 1rem;
+    }
+    input{
+        padding: 12px 16px;
+        align-items: center;
+    }
+    input:focus{
+        // outline: none;
+        border: 1px solid #49BD49;
+    }
+    .booking-title{
+        margin-bottom: 2rem;
+    }
+}
+
+
+// Who we are - section
+.who-we-are-section{
+    justify-content: center;
+    align-items: center;
+    background: var(--Primary-Color-Light, #EEFBEE);
+} 
+.who-we-are-section{
+    .image-container-1{
+        position: relative;
+    }
+    .image-container-1 .image-badge{
+        position: absolute;
+        z-index: 999;
+        margin-top: -20px;
+        left: -55px; 
+    }
+    .image-container-2{
+        position: relative;
+        margin-top: 5.6rem;
+    
+    }
+    .image-container-2 .image-badge{
+        position: absolute;
+        z-index: 999;
+        top: -24px;
+        right: -12px;
+
+    }
+    img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    
+    }
+    .image-badge span{
+        color: var(--primary-color-normal-hover, #49BD49);
+        background-color: #fff;
+        font-family: ClashDisplay-Variable;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 19.2px */
+        padding: 10px 24px;
+        border-radius: 24px;
+        border: 1px solid black;
+        
+    
+
+    }
+    .image-badge img{
+        width: 48px;
+        padding: 10px;
+        border-radius: 50%;
+        border: 1px solid var(--primary-color-normal-hover, #49BD49);
+        background: #FFF;
+        margin-right: -20px;
+
+
+    }
+}
+.text-side{ 
+    h2{
+        color: var(--Secondary-color-Normal, #151E25);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 38.4px */
+    }
+    p{
+        color: var(--grey-dark-hover, #7A7A7A);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+    }
+    a{
+        text-decoration: none;
+        color: var(--primary-color-normal-hover, #49BD49);
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding: 12px 24px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        border: 1px solid var(--primary-color-normal-hover, #49BD49);
+    }
+    a:hover{
+        background-color: #49BD49;
+        color: #fff;
+        transition: all 1s;
+    }
+}
+
+// Comprehensive Delivery Solutions Section
+
+.delivery-solution-section{
+    h2{
+        color: var(--Secondary-color-Normal, #151E25);
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 38.4px */
+        margin-bottom: 1rem;
+    }
+
+    .solution-card{
+        display: flex;
+        flex-shrink: auto;
+        padding: 27px 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+    }
+    .solution-card-second{
+        display: flex;
+        padding: 27px 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+    }
+    .solution-card:hover{
+        background-color: #94ec94;
+        transition: all 1s;
+    
+    }
+    .solution-card-color1{
+        background-color: rgba(255, 226, 116, 0.10);
+    }
+    .solution-card-color2{
+        background-color: rgba(97, 147, 255, 0.10);
+
+    }
+    .solution-card-color3{
+        background-color: rgba(15, 217, 255, 0.10);
+
+    }
+    .solution-card-color4{
+        background-color: rgba(0, 102, 237, 0.10);
+
+    }
+    .solution-card-color5{
+        background-color: rgba(255, 0, 0, 0.10);
+    }
+    img{
+        width: 56px;
+        height: 56px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        border: 0.75px solid #FFB62A;
+        margin-bottom: 1.5rem;
+
+    }
+    h5{
+        color: #000;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    p{
+        color: var(--grey-dark-hover, #7A7A7A);
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+            }
+}
+
+// Why Moveit Section
+.why-moveit-section{
+    height: auto;
+    background-image: url('/assets/images/Vector 3.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+}
+.whymoveit-leftside{
+    h3{
+        color: #000;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 38.4px */
+    }
+    p{
+        color: var(--grey-dark-hover, #7A7A7A);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+    }
+    .moveit-card{
+        display: flex;
+        padding: 28.181px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 0;
+        border-radius: 14.09px;
+        border: 1.174px solid var(--primary-color-light-active, #C9F1C9);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.70) 100%);
+        backdrop-filter: blur(4.5px);
+    }
+    .moveit-card{
+        img{
+            width: 70.452px;
+            height: 70.452px;
+        }
+        h5{
+            color: #000;
+            text-align: center;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%; /* 21.6px */
+            margin-top: 1.32rem;
+
+        }
+    }
+
+}
+
+
+// Testimonial Section
+// .testimonial-section{
+    
+// }
+.testimonial-container{
+    background-image: url('../assets/images/image.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 60% 60%; 
+}
+.testimonial{
+    padding: 20px 0px;
+    align-items: center;
+    border-radius: 24px;
+    border: 1px solid rgba(230, 230, 230, 0.30);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.21) 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+}
+.testimonial{
+    img{
+        width: 57px;
+        height: 57px;
+        border-radius: 57px;
+        margin-bottom: 8px;
+        margin-top: 1.5rem;
+    }
+    h3{
+        color: #000;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    p{
+        color: #555;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+        margin-top: 1rem;
+    }
+}
