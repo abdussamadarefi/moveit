@@ -23,7 +23,7 @@ The Moveit website is designed to provide users with a seamless experience for b
 To get started with the project, clone the repository and open the `index.html` file in your browser.
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/abdussamadarefi/moveit.git>
 cd Moveit
 ```
 
