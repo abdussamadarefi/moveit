@@ -5,19 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moveit</title>
 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <!-- Scripts -->
+     <script src="./js/index.js" defer></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       crossorigin="anonymous"
       defer
     ></script>
+    
   </head>
   <body>
+
+    <!-- Top Section -->
     <section class="container-fluid top-section">
       <div class="container">
         <nav class="navbar navbar-expand-md bg-transparent">
@@ -40,7 +50,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-md-auto bor text-sm-center mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Service</a>
+                  <a class="nav-link active" href="#service">Service</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -60,10 +70,10 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link" href="#chooseus">Why Choose us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Company</a>
+                  <a class="nav-link" href="#company">Company</a>
                 </li>
               </ul>
               <div class="ms-md-auto ms-sm-0 text-sm-center">
@@ -114,7 +124,7 @@
 
     <!-- Booking Section  -->
 
-    <section class="container-fluid booking-section">
+    <section class="container-fluid booking-section" >
       <div class="container justify-content-center align-items-center py-5">
         <h1 class="">Quick book a parcel</h1>
         <div class="row mb-3">
@@ -147,7 +157,7 @@
 
     <!-- Who we are section -->
 
-    <section class="container-fluid who-we-are-section">
+    <section class="container-fluid who-we-are-section" id="company">
       <div class="container d-flex py-5">
         <div class="row py-3">
           <div class="col-md-6 col-sm-12 d-flex gap-3 mb-sm-3">
@@ -185,7 +195,7 @@
     </section>
 
     <!-- Comprehensive Delivery Solutions Section -->
-    <section class="container-fluid delivery-solution-section">
+    <section class="container-fluid delivery-solution-section" id="service">
       <div class="container">
         <div class="row py-5">
           <div class="col-12">
@@ -194,55 +204,65 @@
               Solutions
             </h2>
           </div>
-          <div class="row">
-          <div class="d-md-flex gx-sm-3 gap-md-3 justify-content-center align-items-center">
+          <div class="row gy-2 justify-content-center align-items-center">
             <div
-              class="col-lg-4 col-md-4 col-sm-12 mb-sm-3 text-center solution-card solution-card-color1"
+              class="col-lg-4 col-md-4 col-sm-12 text-center "
             >
+            <div class="solution-card solution-card-color1">
               <img src="./assets/icons/Fast.png" alt="" />
               <h5>Standard Delivery</h5>
               <p>
                 Our standard delivery service is affordable and reliable, ideal for non-urgent packages needing timely delivery.
               </p>
             </div>
+            </div>
+
             <div
-              class="col-lg-4 col-md-4 col-sm-12 mb-sm-3 text-center solution-card solution-card-color2"
+              class="col-lg-4 col-md-4 col-sm-12 text-center "
             >
+            <div class="solution-card solution-card-color2">
               <img src="./assets/icons/Express delivery.png" alt="" />
               <h5>Express Delivery</h5>
               <p>
                 When time is of the essence, our express delivery ensures your package arrives quickly and securely.
               </p>
             </div>
+            </div>
+
             <div
-              class="col-lg-4 col-md-4 col-sm-12 mb-sm-3 text-center solution-card solution-card-color3"
+              class="col-lg-4 col-md-4 col-sm-12 text-center "
             >
+            <div class="solution-card solution-card-color3">
               <img src="./assets/icons/Cargo ship.png" alt="" />
               <h5>Overnight Shipping</h5>
               <p>
                 Ensure next-morning delivery with our overnight shipping service, providing speed and reliability for urgent packages.
               </p>
             </div>
-          </div>
-        </div>
-          <div class="row justify-content-center gap-3">
+            </div>
+
             <div
-              class="col-md-4 col-sm-12 text-center solution-card-second solution-card-color4"
+              class="col-md-4 col-sm-12 text-center "
             >
+            <div class="solution-card solution-card-color4">
               <img src="./assets/icons/Logistics.png" alt="" />
               <h5>International Shipping</h5>
               <p>
                 Connecting you to the world, our international shipping services make global deliveries seamless.
               </p>
             </div>
+            </div>
+
             <div
-              class="col-md-4 col-sm-12 text-center solution-card-second solution-card-color5"
+              class="col-md-4 col-sm-12 text-center "
             >
+            <div class="solution-card solution-card-color5">
               <img src="./assets/icons/Delivery truck.png" alt="" />
               <h5>Real-Time Tracking</h5>
               <p>
                 Connecting you to the world, our international shipping services make global deliveries seamless.
               </p>
+            </div>
             </div>
             
           </div>
@@ -252,7 +272,7 @@
 
     <!-- Why Moveit -->
 
-    <section class="container-fluid why-moveit-section">
+    <section class="container-fluid why-moveit-section" id="chooseus">
       <div class="container py-5">
         <div class="row py-5 mb-5">
           <div class="col-md-7 col-sm-12 whymoveit-leftside align-self-center">
@@ -293,11 +313,11 @@
 <!-- Testimonial Section -->
 
     <section class="container-fluid testimonial-section py-5">
-      <div class="container py-5 testimonial-container justify-content-center align-items-center mt-5">
+      <div class="container testimonial-container justify-content-center align-items-center mt-5 swiper">
 
-        <div class="row gap-3 py-5">
-          
-          <div class="col-md-3 col-sm-6 py-5 text-center testimonial">
+        <div class="py-5 my-5 swiper-wrapper">
+
+          <div class=" text-center testimonial swiper-slide">
             <img src="./assets/aviator/Ellipse 132.png" alt="">
             <h3>Kathryn Murphy</h3>
             <div>
@@ -321,7 +341,31 @@
               Moveit never fails to deliver on time. Highly recommended!
             </p>
           </div>
-          <div class="col-md-3 col-sm-6 align-self-center  text-center testimonial">
+          <div class=" text-center testimonial swiper-slide">
+            <img src="./assets/aviator/Ellipse 132.png" alt="">
+            <h3>Hen Murphy</h3>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                <path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#FFA800"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                <path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#FFA800"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                <path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#FFA800"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                <path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#FFA800"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                <path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#A4A4A4"/>
+              </svg>
+            </div>
+            <p>
+              Moveit never fails to deliver on time. Highly recommended!
+            </p>
+          </div>
+          <div class="  text-center testimonial swiper-slide">
             <img src="./assets/aviator/Ellipse 133.png" alt="">
             <h3>Theresa Webb</h3>
             <div>
@@ -342,10 +386,10 @@
               </svg>
             </div>
             <p>
-              Excellent service and very reliable. My go-to courier company
+              Excellent service and very reliable. My go-to courier Company.
             </p>
           </div>
-          <div class="col-md-3 col-sm-6 align-self-center  text-center testimonial">
+          <div class="  text-center testimonial swiper-slide">
             <img src="./assets/aviator/Ellipse 134.png" alt="">
             <h3>Jerome Belly</h3>
             <div>
@@ -369,7 +413,7 @@
               I trust Moveit with all my urgent deliveries. They’re the best!
             </p>
           </div>
-          <div class="col-md-3 col-sm-6 align-self-center  text-center testimonial">
+          <div class="  text-center testimonial swiper-slide">
             <img src="./assets/aviator/Ellipse 135.png" alt="">
             <h3>Savannah Nguyen</h3>
             <div>
@@ -393,47 +437,196 @@
               Moveit never fails to deliver on time. Highly recommended!
             </p>
           </div>
-       
+
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
 
       </div>
     </section>
 
 
-    <!-- Services Section  -->
-    <section class="container-fluid mt-5">
-      <div class="container mt-5 p-5">
-        <h1 class="text-center">Our Services</h1>
-        <div class="row mt-5">
-          <div class="col-md-4 col-sm-12 shadow">
-            <div class="service-card">
-              <img src="./assets/images/Group-1.png" alt="" />
-              <h5>Fast Delivery</h5>
+<!-- News Section -->
+    <section class="container-fluid">
+      <div class="container py-4">
+        <div class="row gy-2">
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+          <img src="./assets/images/new-image-1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="card-author d-flex gap-2 align-items-center">
+              <div class="autor-image" style="width: 29px; height: 29px;">
+                <img src="./assets/aviator/devon-lane.svg" alt="">
+              </div>
+              <div class="author">
+                <h6 class="author-name">Devon Lane</h6>
+                <span class="card-date">15 May 2020 9:00 am</span>
+              </div>
+            </div>
+            <p class="card-text">
+             <a href="" class="nav-link">Revolutionizing Delivery: How MoveIt Courier Service Ensures Speed and Reliability</a> 
+            </p>
+          </div>
+        </div>
+        </div>
+        
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+          <img src="./assets/images/news-image-2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="card-author d-flex gap-2 align-items-center">
+              <div class="autor-image" style="width: 29px; height: 29px;">
+                <img src="./assets/aviator/devon-lane.svg" alt="">
+              </div>
+              <div class="author">
+                <h6 class="author-name">Devon Lane</h6>
+                <span class="card-date">15 May 2020 9:00 am</span>
+              </div>
+            </div>
+            <p class="card-text">
+            <a href="" class="nav-link"> The Ultimate Guide to Choosing the Right Courier Service: Why MoveIt Stands Out</a>
+            </p>
+          </div>
+        </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+          <img src="./assets/images/news-image-3.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="card-author d-flex gap-2 align-items-center">
+              <div class="autor-image" style="width: 29px; height: 29px;">
+                <img src="./assets/aviator/devon-lane.svg" alt="">
+              </div>
+              <div class="author">
+                <h6 class="author-name">Devon Lane</h6>
+                <span class="card-date">15 May 2020 9:00 am</span>
+              </div>
+            </div>
+            <p class="card-text">
+              <a class="nav-link" href="">Top 5 Benefits of Using MoveIt Courier Service for Your Business Deliveries</a>
+            </p>
+          </div>
+        </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class=" parcel-booking-card-wrapper py-5">
+          <div class="parcel-booking-card text-center align-items-center my-4">
+            <h2 class="text-center">
+              Book Now <br> your parcel
+            </h2>
+            <button class="mb-4" >Get Started</button>
+          </div>
+          
+        </div>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+
+<!-- Track Parcel Section -->
+    <section class="container-fluid py-5">
+      <div class="container track-parcel-container ">
+        <div class="overlay">
+          <div class="row align-items-center p-5">
+            <div class="col-md-6 col-sm-12 ">
+              <h3>Ready to Experience the Best Courier Service?</h3>
               <p>
-                Get your parcels delivered within the shortest possible time
+                Whether you’re sending a package locally or internationally, Moveit has got you covered. Sign up today and enjoy seamless delivery services.
               </p>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-12 shadow">
-            <div class="service-card">
-              <img src="./assets/images/Group-2.png" alt="" />
-              <h5>Secure Delivery</h5>
-              <p>
-                Get your parcels delivered within the shortest possible time
-              </p>
+            <div class="col-md-6 col-sm-12 ">
+              <div class="track-parcel-form">
+              <label for="Search">Track Your Parcel</label>
+              <form class="form-inline d-flex">
+                <input class="form-control me-3 " type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Track</button>
+              </form>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-12 shadow">
-            <div class="service-card">
-              <img src="./assets/images/Group-3.png" alt="" />
-              <h5>Reliable Delivery</h5>
-              <p>
-                Get your parcels delivered within the shortest possible time
-              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+
+    <!-- Footer -->
+     <footer class="container-fluid py-5">
+      <div class="container mt-5">
+        <div class="row">
+        <div class="col-md-8 col-sm-6">
+          <div class="footer-left-content">
+            <div class="brand">
+              <a class="footer-brand nav-link d-flex align-items-center" href="#">
+                <img class="brand-img" src="./assets/images/Vector.png" alt="" />
+                <span class="brand-name">Moveit</span>
+              </a>
+            </div>
+            <div class="telephone mb-3"> 
+              <a class="nav-link" href="tel:(208) 555-0112">
+                <i class="fa-solid fa-phone"></i>
+                <span>(208) 555-0112</span>
+              </a>
+            </div>
+            <div class="email mb-3"> 
+              <a class="nav-link" href="mailto:care.customer@moveit.com">
+                <i class="fa-solid fa-at"></i>
+                <span>care.customer@moveit.com</span>
+              </a>
+            </div>
+            <div class="address">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>1901 Thornridge Cir. Shiloh, Hawaii 81063</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="footer-right-content">
+          <h3>Social media</h3>
+          <div class="social-links d-flex">
+            <div class="facebook me-4">
+              <a class="nav-link" href="www.facebook.com">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </div>
+            <div class="x me-4">
+              <a class="nav-link" href="www.x.com">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+            <div class="youtube me-4">
+              <a class="nav-link" href="www.youtube.com">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+            <div class="linkedin">
+              <a class="nav-link" href="www.linkedin.com">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="footer-bottom-content py-4 d-flex justify-content-between align-items-center">
+        <div class="footer-bottom-left">
+          <span>Copyright &copy; moveit. All Rights Reserved</span>
+        </div>
+        <div class="footer-bottom-right d-flex gap-2">
+          <a class="nav-link" href="#">Privacy Policy</a>
+          <a class="nav-link" href="#">Terms of Service</a>
+        </div>
+      </div>
+     </footer>
+
+
+
+
+    <!-- Script Linking -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   </body>
 </html>
