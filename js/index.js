@@ -1,42 +1,34 @@
-// Author: Abdus Samad Arefi
-// Date: 2025-02-24
+console.log('test')
 
 
+console.log('test')
 
-// Swiper JS
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  speed: 1000,
-  autoplay: {
-    delay: 3000,
-    reverseDirection: true
-  },
-  loop: true,
-
-
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    prevEl: '.swiper-button-prev',
-  },
-  breakpoints: {
-      0:{
-          slidesPerView: 1
-      },
-      480:{
-          slidesPerView: 2,
-          spaceBetween: 20,
-      },
-      640:{
-          slidesPerView: 4,
-          spaceBetween: 20,
-      }
-  },
-
-});
+const swiper = new Swiper('.testimonial-container', {
+    // Optional parameters
+    loop: true,
+ 
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        0:{
+            slidesPerView: 1
+        },
+        768:{
+            slidesPerView: 2
+        },
+        1200:{
+            slidesPerView: 4
+        }
+    },
+  
+  });
+  console.log('test')

@@ -322,27 +322,42 @@ body{
         border-radius: 12px;
     }
     .solution-card:hover{
-        background-color: #94ec94;
         transition: all 1s;
     
     }
     .solution-card-color1{
         background-color: rgba(255, 226, 116, 0.10);
+        &:hover{
+            background-color: rgba(255, 226, 116, 0.30);
+    }
+    
     }
     .solution-card-color2{
         background-color: rgba(97, 147, 255, 0.10);
+        &:hover{
+            background-color: rgba(97, 147, 255, 0.30);
+        }
 
     }
     .solution-card-color3{
         background-color: rgba(15, 217, 255, 0.10);
+        &:hover{
+            background-color: rgba(15, 217, 255, 0.30);
+        }
 
     }
     .solution-card-color4{
         background-color: rgba(0, 102, 237, 0.10);
+        &:hover{
+            background-color: rgba(0, 102, 237, 0.30);
+        }
 
     }
     .solution-card-color5{
         background-color: rgba(255, 0, 0, 0.10);
+        &:hover{
+            background-color: rgba(255, 0, 0, 0.30);
+        }
     }
     img{
         width: 56px;
@@ -693,12 +708,13 @@ footer{
     i{
         width: 24px;
         height: 24px;
+        color: #484848;
     }
 }
 .telephone{
 
         span{
-            color: var(--grey-dark-hover, #7A7A7A);
+            color: var(--grey-dark-hover, #484848);
             font-size: 16px;
             font-style: normal;
             font-weight: 700 !important;
@@ -707,7 +723,7 @@ footer{
 }
 .email{
     span{
-        color: var(--grey-dark-hover, #7A7A7A);
+        color: var(--grey-dark-hover, #484848);
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -716,7 +732,7 @@ footer{
 }
 .address{
     span{
-        color: var(--grey-dark-hover, #7A7A7A);
+        color: var(--grey-dark-hover, #484848);
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -725,7 +741,7 @@ footer{
 }
 .footer-right-content{
     h3{
-        color: var(--grey-normal-active, #A3A3A3);
+        color: var(--grey-normal-active, #484848);
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
