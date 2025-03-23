@@ -46,27 +46,12 @@ To change fonts:
 
 ## Advanced Customization
 
-### JavaScript Configuration
-
-Located in `js/index.js`:
-
-```javascript
-// Tracking System Configuration
-const CONFIG = {
-    API_ENDPOINT: 'your-api-endpoint',
-    REFRESH_INTERVAL: 5000,
-    ERROR_TIMEOUT: 3000
-};
-```
-
 ### SCSS Variables
 
 Key variables in `scss/style.scss`:
 
 ```scss
 $theme-color: #49BD49;
-$font-primary: 'ClashDisplay-Variable';
-$font-secondary: 'Inter';
 $container-max-width: 1320px;
 $grid-breakpoints: (
   xs: 0,
