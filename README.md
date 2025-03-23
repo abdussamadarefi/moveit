@@ -1,41 +1,106 @@
-# Moveit Website
+# Moveit - Modern Courier & Logistics HTML Template
 
-This repository contains the source code for the Moveit website, a responsive and modern courier service website.
+⚠️ **PRIVATE REPOSITORY - COMMERCIAL PROJECT**
 
-## Overview
+This is a premium template. Unauthorized use, distribution, or sharing is strictly prohibited.
 
-The Moveit website is designed to provide users with a seamless experience for booking and tracking their parcels. The website features various sections including services, testimonials, and comprehensive delivery solutions.
+## 🚀 Live Demo
+- [View Demo](your-demo-url.com)
+- [Purchase Template](your-purchase-url.com)
 
-## Credits
+## ✨ Features
+- Real-time parcel tracking system
+- Modern and clean design
+- Fully responsive layout
+- SEO optimized
+- Fast loading & performance optimized
+- Cross-browser compatible
+- Well-documented code
 
-- **UX Design**: The user experience design for the Moveit website was created by **[Abdul Karim](https://www.behance.net/abdulkarimgfx)**.
-- **Development**: The website was developed and made responsive by **Abdud Samad Arefi**.
-
-## Technologies Used
-
-- HTML
+## 🛠 Tech Stack
+- Bootstrap 5.3
 - SCSS
-- Bootstrap
-- JavaScript
+- JavaScript/jQuery
 - Swiper.js
+- AOS Animation
+- Font Awesome 6
+- Google Fonts
+- Lenis Smooth Scroll
 
-## Getting Started
+## 📦 Installation
 
-To get started with the project, clone the repository and open the `index.html` file in your browser.
-
+1. Clone the repository:
 ```bash
-git clone https://github.com/abdussamadarefi/moveit.git
-cd Moveit
+git clone https://github.com/yourusername/moveit.git
 ```
 
-## Project Structure
+2. Install dependencies:
+```bash
+npm install
+```
 
-- `index.html`: The main HTML file for the website.
-- `scss/style.scss`: The main SCSS file for styling the website.
-- `js/index.js`: The main JavaScript file for the website.
-- `assets/`: Directory containing images, icons, and other assets.
-- `fonts/`: Directory containing custom fonts.
+3. Start development server:
+```bash
+npm start
+```
 
-## License
+4. Watch SCSS changes:
+```bash
+npm run sass
+```
 
-This project is licensed under the MIT License.
+5. Build for production:
+```bash
+npm run build
+```
+
+## 📁 Project Structure
+```
+moveit/
+├── assets/          # Images and static assets
+├── css/            # Compiled CSS files
+├── scss/           # SCSS source files
+├── js/             # JavaScript files
+├── fonts/          # Custom fonts
+├── articles/       # Blog articles
+├── documentation/  # Project documentation
+└── index.html      # Main entry point
+```
+
+## 🎨 Customization
+- Edit SCSS variables in `scss/style.scss`
+- Modify tracking system in `js/index.js`
+- Update content in HTML files
+- Configure animations in respective JS files
+
+## 🔒 License & Usage
+- Commercial use requires valid license purchase
+- Unauthorized distribution is prohibited
+- One license per domain/project
+- See [licensing terms](./documentation/credits.md)
+
+## 🛡️ Security
+- Keep repository private
+- Do not share access credentials
+- Remove sensitive information before commits
+- Report security issues to support
+
+## 📄 License
+- Regular License: $49
+- Extended License: $249
+See [Credits & Licensing](./documentation/credits.md) for details.
+
+## 🤝 Support
+- Email: abdussamadarefi@gmail.com
+- Documentation: [View Docs](./documentation/index.md)
+- Support Period: 6-12 months (based on license)
+
+## 🙏 Credits
+- Design: Abdul Karim
+- Development: Abdud Samad Arefi
+- Images: Used for demo purposes only
+
+## 📝 Changelog
+- v1.2.0: Mobile optimization & performance improvements
+- v1.1.0: Added tracking system & enhanced animations
+- v1.0.0: Initial release

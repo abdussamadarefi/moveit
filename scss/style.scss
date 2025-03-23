@@ -1,5 +1,6 @@
 // Custom.scss
 $theme-color: #49BD49;
+$theme-color-secondary: #cdfbcc;
 
 // Include any default variable overrides here (though functions won't be available)
 
@@ -62,7 +63,7 @@ body{
 @media (max-width: 767px) {
     .top-section {
         background-image: none;
-        background-color: #cdfbcc; // Add a suitable background color
+        background-color: $theme-color-secondary; // Add a suitable background color
         height: auto; // Adjust height for mobile devices
         padding-bottom: 0.5rem;
     }
@@ -79,7 +80,7 @@ body{
     margin-left: 12px;
 }
 .dropdown-item:hover{
-    background-color: #97f37d;
+    background-color: $theme-color-secondary;
 }
 .btn-get-started{
     color: $theme-color;
@@ -88,8 +89,28 @@ body{
     color: #ffffff;
     background-color: $theme-color !important;
 }
+.navbar-nav li a:before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $theme-color-secondary;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+}
 .hero-section{
-    margin-top: 103px;
+    margin-top: 80px;
     height: auto;
 }
 .hero-section{
@@ -143,9 +164,14 @@ body{
         padding: 12px 24px;
         border-radius: 12px;
         background-color: $theme-color;
-        color: #E8E9E9;
+        color: hsl(180, 2%, 91%);
         text-align: center;
         font-weight: 600;
+        &:hover{
+            color: #000;
+            border: 1px solid $theme-color;
+            transition: all 1s;
+        }
         }
     input[type="text"]:focus{
             outline: none;
@@ -196,6 +222,14 @@ body{
     input:focus{
         // outline: none;
         border: 1px solid $theme-color;
+    }
+    button{
+        background: $theme-color;
+        color: #fff;
+        &:hover{
+            color: #000;
+            background: $theme-color;
+        }
     }
     .booking-title{
         margin-bottom: 2rem;
@@ -328,35 +362,40 @@ body{
     .solution-card-color1{
         background-color: rgba(255, 226, 116, 0.10);
         &:hover{
-            background-color: rgba(255, 226, 116, 0.30);
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(255, 226, 116);
     }
     
     }
     .solution-card-color2{
         background-color: rgba(97, 147, 255, 0.10);
         &:hover{
-            background-color: rgba(97, 147, 255, 0.30);
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(97, 147, 255);
         }
 
     }
     .solution-card-color3{
         background-color: rgba(15, 217, 255, 0.10);
         &:hover{
-            background-color: rgba(15, 217, 255, 0.30);
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(15, 217, 255);
         }
 
     }
     .solution-card-color4{
         background-color: rgba(0, 102, 237, 0.10);
         &:hover{
-            background-color: rgba(0, 102, 237, 0.30);
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(0, 102, 237);
         }
 
     }
     .solution-card-color5{
         background-color: rgba(255, 0, 0, 0.10);
         &:hover{
-            background-color: rgba(255, 0, 0, 0.30);
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(255, 0, 0);
         }
     }
     img{
@@ -422,6 +461,7 @@ body{
         border: 1.174px solid var(--primary-color-light-active, #C9F1C9);
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.70) 100%);
         backdrop-filter: blur(4.5px);
+        overflow: hidden;
     }
     .moveit-card{
         img{
@@ -441,7 +481,26 @@ body{
     }
 
 }
-
+.moveit-card:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $theme-color-secondary;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    }
 
 // Testimonial Section
 // .testimonial-section{
@@ -567,13 +626,14 @@ body{
         line-height: 120%; /* 28.8px */
         text-transform: uppercase;
     }
-    button{
+    button{  
+        text-decoration: none;
         margin-top: 1rem;
         padding: 12px 24px;
         justify-content: center;
         align-items: center;
         border-radius: 12px;
-        background: var(--primary-color-normal-hover, #49BD49);
+        background: var(--primary-color-normal-hover,$theme-color);
         color: var(--Secondary-color-Light, #E8E9E9);
         text-align: center;
         font-size: 16px;
@@ -581,6 +641,12 @@ body{
         font-weight: 600;
         line-height: normal;
         border: none;
+        &:hover{
+            background: var(--primary-color-normal-hover,#fff);
+            color: #000;
+            border: 1px solid #000;
+            transition: all 1s;
+        }
     }
 }
 
@@ -660,7 +726,7 @@ body{
         padding: 12px 24px;
         justify-content: center;
         border-radius: 12px;
-        background: var(--primary-color-normal-hover, #49BD49);
+        background: var(--primary-color-normal-hover, $theme-color);
         color: var(--Secondary-color-Light, #E8E9E9);
         text-align: center;
         font-size: 16px;
@@ -765,4 +831,33 @@ footer{
         font-weight: 500;
         line-height: 120%; /* 16.8px */
     }
+}
+
+
+// Track Parcel Page
+
+.track-parcel-section{
+    background-color: $theme-color;
+    input[type="text"]{
+        border: none;
+        padding: 3px;
+    }
+    @media (max-width: 992px){
+        input[type="text"]::placeholder {
+            content: 'Enter tracking Number';
+        }
+    }
+    input[type="button"]{
+        font-family: ClashDisplay-Variable;
+        padding: 12px 24px;
+        border-radius: 12px;
+        background-color: $theme-color;
+        color: hsl(180, 2%, 91%);
+        text-align: center;
+        font-weight: 600;
+        }
+    input[type="text"]:focus{
+            outline: none;
+            border: none;
+        }
 }

@@ -11915,7 +11915,7 @@ body {
 }
 
 .dropdown-item:hover {
-  background-color: #97f37d;
+  background-color: #cdfbcc;
 }
 
 .btn-get-started {
@@ -11927,8 +11927,29 @@ body {
   background-color: #49BD49 !important;
 }
 
+.navbar-nav li a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #cdfbcc;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
 .hero-section {
-  margin-top: 103px;
+  margin-top: 80px;
   height: auto;
 }
 
@@ -11982,9 +12003,14 @@ body {
   padding: 12px 24px;
   border-radius: 12px;
   background-color: #49BD49;
-  color: #E8E9E9;
+  color: hsl(180, 2%, 91%);
   text-align: center;
   font-weight: 600;
+}
+.hero-section input[type=button]:hover {
+  color: #000;
+  border: 1px solid #49BD49;
+  transition: all 1s;
 }
 .hero-section input[type=text]:focus {
   outline: none;
@@ -12032,6 +12058,14 @@ body {
 }
 .booking-section input:focus {
   border: 1px solid #49BD49;
+}
+.booking-section button {
+  background: #49BD49;
+  color: #fff;
+}
+.booking-section button:hover {
+  color: #000;
+  background: #49BD49;
 }
 .booking-section .booking-title {
   margin-bottom: 2rem;
@@ -12147,31 +12181,36 @@ body {
   background-color: rgba(255, 226, 116, 0.1);
 }
 .delivery-solution-section .solution-card-color1:hover {
-  background-color: rgba(255, 226, 116, 0.3);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 226, 116);
 }
 .delivery-solution-section .solution-card-color2 {
   background-color: rgba(97, 147, 255, 0.1);
 }
 .delivery-solution-section .solution-card-color2:hover {
-  background-color: rgba(97, 147, 255, 0.3);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(97, 147, 255);
 }
 .delivery-solution-section .solution-card-color3 {
   background-color: rgba(15, 217, 255, 0.1);
 }
 .delivery-solution-section .solution-card-color3:hover {
-  background-color: rgba(15, 217, 255, 0.3);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(15, 217, 255);
 }
 .delivery-solution-section .solution-card-color4 {
   background-color: rgba(0, 102, 237, 0.1);
 }
 .delivery-solution-section .solution-card-color4:hover {
-  background-color: rgba(0, 102, 237, 0.3);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 102, 237);
 }
 .delivery-solution-section .solution-card-color5 {
   background-color: rgba(255, 0, 0, 0.1);
 }
 .delivery-solution-section .solution-card-color5:hover {
-  background-color: rgba(255, 0, 0, 0.3);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 0, 0);
 }
 .delivery-solution-section img {
   width: 56px;
@@ -12232,6 +12271,7 @@ body {
   border: 1.174px solid var(--primary-color-light-active, #C9F1C9);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.7) 100%);
   backdrop-filter: blur(4.5px);
+  overflow: hidden;
 }
 .whymoveit-leftside .moveit-card img {
   width: 70.452px;
@@ -12245,6 +12285,27 @@ body {
   font-weight: 600;
   line-height: 120%; /* 21.6px */
   margin-top: 1.32rem;
+}
+
+.moveit-card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #cdfbcc;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 
 .testimonial-container {
@@ -12366,6 +12427,7 @@ body {
   text-transform: uppercase;
 }
 .parcel-booking-card button {
+  text-decoration: none;
   margin-top: 1rem;
   padding: 12px 24px;
   justify-content: center;
@@ -12379,6 +12441,12 @@ body {
   font-weight: 600;
   line-height: normal;
   border: none;
+}
+.parcel-booking-card button:hover {
+  background: var(--primary-color-normal-hover, #fff);
+  color: #000;
+  border: 1px solid #000;
+  transition: all 1s;
 }
 
 .track-parcel-container {
@@ -12548,4 +12616,30 @@ footer {
   font-style: normal;
   font-weight: 500;
   line-height: 120%; /* 16.8px */
+}
+
+.track-parcel-section {
+  background-color: #49BD49;
+}
+.track-parcel-section input[type=text] {
+  border: none;
+  padding: 3px;
+}
+@media (max-width: 992px) {
+  .track-parcel-section input[type=text]::placeholder {
+    content: "Enter tracking Number";
+  }
+}
+.track-parcel-section input[type=button] {
+  font-family: ClashDisplay-Variable;
+  padding: 12px 24px;
+  border-radius: 12px;
+  background-color: #49BD49;
+  color: hsl(180, 2%, 91%);
+  text-align: center;
+  font-weight: 600;
+}
+.track-parcel-section input[type=text]:focus {
+  outline: none;
+  border: none;
 }/*# sourceMappingURL=style.css.map */

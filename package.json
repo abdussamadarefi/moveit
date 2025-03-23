@@ -1,20 +1,24 @@
-
 {
   "name": "moveit",
-  "version": "1.0.0",
+  "version": "1.2.0",
+  "description": "Modern Courier & Logistics HTML Template",
   "main": "index.js",
   "scripts": {
-    "dev": "sass --watch ./scss/style.scss ./css/style.css"
+    "start": "live-server",
+    "sass": "sass --watch scss:css",
+    "build": "sass scss:css --style compressed && uglifyjs js/*.js -o js/main.min.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "saas": "^1.0.0"
-  },
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "sass": "^1.83.4"
+    "bootstrap": "^5.3.0",
+    "swiper": "^11.0.0",
+    "aos": "^2.3.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.69.0",
+    "uglify-js": "^3.17.0"
   }
 }

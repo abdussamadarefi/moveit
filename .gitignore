@@ -59,3 +59,48 @@ typings/
 
 # next.js build output
 .next
+
+# json file
+/package-lock/
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# Environment files
+.env
+.env.*
+
+# IDE/Editor
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Sensitive information
+config.private.js
+credentials.json
+auth.json
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Production files
+production/
+deploy/
+
+# License verification files
+license.key
+verification.json

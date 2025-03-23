@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moveit</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="./assets/images/Vector.png"
+      type="image/x-icon"/>
+
+    <!-- stylesheet linking -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Scripts -->
+     <script src="./js/index.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    
+  </head>
+  <body>
+
+    <!-- Top Section -->
+    <section class="container-fluid ">
+      <div class="container">
+        <nav class="navbar navbar-expand-md bg-transparent">
+          <div class="container-fluid d-flex flex-wrap justify-content-center">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+              <img class="brand-img" src="../assets/images/Vector.png" alt="" />
+              <span class="brand-name">Moveit</span>
+            </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+
+   <section class="container-fluid track-parcel-section">
+    <div class="container text-center py-5">
+      <h2 class="mb-4">Track Your Parcel</h2>
+      <div class="w-100 mt-md-1 tracking-search">
+        <input
+          class="placeholder-sm w-100"
+          type="text"
+          placeholder="Enter your tracking Number"
+          id="inputTrackingNumber"
+        />
+        <input type="button" id="track-parcel-input" value="Track" class="btn" onclick="searchParcel()" />
+      </div>
+      <div  class="mt-5 ">
+        <!-- Tracking information will be displayed here -->
+         <p id="errorMessage" class="d-none"></p>
+        <table id="trackingInfo" class="table table-bordered d-none">
+          <thead>
+            <tr>
+              <th colspan="2">Tracking Information</th>
+            </tr>
+          </thead>
+          <tbody class="text-left">
+            <tr>
+              <td class="w-25">Tracking Number</td>
+              <td ><span id="trackingNumber"></span></td>
+            </tr>
+            <tr>
+              <td>Collection Address</td>
+              <td><span id="collectionAddress"></span></td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td ><span id="collectionPhone"></span></td>
+            </tr>
+            <tr>
+              <td>Delivery Address</td>
+              <td ><span id="deliveryAddress"></span ></td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td ><span id="deliveryPhone"></span></td>
+            </tr>
+            <tr>
+              <td>Parcel Location</td>
+              <td ><span id="parcelLocation"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+   </section>
+
+
+
+    <!-- Footer -->
+     <footer class="container-fluid pt-5">
+      <div class="container mt-5">
+        <div class="row">
+        <div class="col-md-8 col-sm-6">
+          <div class="footer-left-content">
+            <div class="brand">
+              <a class="footer-brand nav-link d-flex align-items-center" href="#">
+                <img class="brand-img" src="../assets/images/Vector.png" alt="" />
+                <span class="brand-name">Moveit</span>
+              </a>
+            </div>
+            <div class="telephone mb-3"> 
+              <a class="nav-link" href="tel:(208) 555-0112">
+                <i class="fa-solid fa-phone"></i>
+                <span>(208) 555-0112</span>
+              </a>
+            </div>
+            <div class="email mb-3"> 
+              <a class="nav-link" href="mailto:care.customer@moveit.com">
+                <i class="fa-solid fa-at"></i>
+                <span>care.customer@moveit.com</span>
+              </a>
+            </div>
+            <div class="address">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>1901 Thornridge Cir. Shiloh, Hawaii 81063</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="footer-right-content">
+          <h3>Social media</h3>
+          <div class="social-links d-flex">
+            <div class="facebook me-4">
+              <a class="nav-link" href="www.facebook.com">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </div>
+            <div class="x me-4">
+              <a class="nav-link" href="www.x.com">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+            <div class="youtube me-4">
+              <a class="nav-link" href="www.youtube.com">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+            <div class="linkedin">
+              <a class="nav-link" href="www.linkedin.com">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="footer-bottom-content py-4 d-flex justify-content-between align-items-center">
+        <div class="footer-bottom-left">
+          <span>Copyright &copy; moveit. All Rights Reserved</span>
+        </div>
+        <div class="footer-bottom-right d-flex gap-2">
+          <a class="nav-link" href="#">Privacy Policy</a>
+          <a class="nav-link" href="#">Terms of Service</a>
+        </div>
+      </div>
+     </footer>
+
+
+
+
+    <!-- Script Linking -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+
+  </body>
+</html>

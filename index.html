@@ -12,7 +12,6 @@
 
     <!-- stylesheet linking -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -21,6 +20,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
     <!-- Scripts -->
      <script src="./js/index.js" defer></script>
     <script
@@ -30,14 +37,13 @@
     ></script>
     
   </head>
-  <body>
-
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
     <!-- Top Section -->
     <section class="container-fluid top-section">
       <div class="container">
         <nav class="navbar navbar-expand-md bg-transparent">
           <div class="container-fluid d-flex flex-wrap justify-content-between">
-            <a class="navbar-brand d-flex align-items-center" href="#">
+            <a class="navbar-brand d-flex align-items-center" href="./index.html">
               <img class="brand-img" src="./assets/images/Vector.png" alt="" />
               <span class="brand-name">Moveit</span>
             </a>
@@ -55,11 +61,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-md-auto bor text-sm-center mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#service">Service</a>
+                  <a class="nav-link active hvr-sweep-to-top" href="#service">Service</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a
-                    class="nav-link dropdown-toggle"
+                    class="nav-link dropdown-toggle hvr-sweep-to-top"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -68,25 +74,26 @@
                     Blog
                   </a>
                   <ul class="dropdown-menu bg-transparent text-center">
-                    <li><a class="dropdown-item" href="#">Parcel</a></li>
-                    <li><a class="dropdown-item" href="#">Booking</a></li>
-                    <li><a class="dropdown-item" href="#">Delivery</a></li>
+                    <li><a class="dropdown-item hvr-sweep-to-top" href="#">Parcel</a></li>
+                    <li><a class="dropdown-item hvr-sweep-to-top" href="#">Booking</a></li>
+                    <li><a class="dropdown-item hvr-sweep-to-top" href="#">Delivery</a></li>
                   </ul>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#chooseus">Why Choose us</a>
+                  <a class="nav-link hvr-sweep-to-top" href="#chooseus">Why Choose us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#company">Company</a>
+                  <a class="nav-link hvr-sweep-to-top" href="#company">Company</a>
                 </li>
               </ul>
               <div class="ms-md-auto ms-sm-0 text-sm-center">
-                <button
+                <a
+                href="#booking"
                   class="btn bg-white btn-outline-success fw-semibold btn-get-started"
                 >
                   Get Started
-                </button>
+              </a>
               </div>
             </div>
           </div>
@@ -96,12 +103,12 @@
         <div class="row align-items-center">
           <div class="col-md-6 col-sm-12">
             <span class="ht-experience">Experience</span>
-            <strong class="ht-lightning"
+            <strong data-aos="zoom-in" data-aos-duration="3000" class="ht-lightning"
               >Lightning-Fast <br />
               Deliveries</strong
             >
             <span class="ht-with">with</span>
-            <span class="ht-moveit">MoveIt</span>
+            <span data-aos="zoom-in" data-aos-duration="1500" class="ht-moveit">MoveIt</span>
             <p class="text-justify">
               MoveIt Courier Service redefines delivery with unmatched speed,
               reliability, and reach. trust us to get it there on time, every
@@ -113,11 +120,12 @@
                 type="text"
                 placeholder="Enter your tracking Number"
               />
-              <input type="button" value="Track" class="btn" />
+              <input type="button" id="track-parcel-input" onclick="redirectToTrackingPage()" value="Track" class="btn" />
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
             <img
+              data-aos="fade-left"  data-aos-duration="3000"
               class="w-100 h-100"
               src="./assets/images/Layer-0-copy-1.png"
               alt=""
@@ -128,8 +136,7 @@
     </section>
 
     <!-- Booking Section  -->
-
-    <section class="container-fluid booking-section" >
+    <section class="container-fluid booking-section" id="booking">
       <div class="container justify-content-center align-items-center py-5">
         <h1 class="">Quick book a parcel</h1>
         <div class="row mb-3">
@@ -153,7 +160,7 @@
                 class="form-control"
                 placeholder="Phone Number"
               />
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn">Submit</button>
             </div>
           </div>
         </div>
@@ -166,8 +173,8 @@
       <div class="container d-flex py-5">
         <div class="row py-3">
           <div class="col-md-6 col-sm-12 d-flex gap-3 mb-sm-3">
-            <div class="image-container-1">
-              <img src="./assets/images/WhoWeAre-1.png" alt="" />
+            <div class="image-container-1 ">
+              <img class="hvr-grow-shadow" src="./assets/images/WhoWeAre-1.png" alt="" />
               <div
                 class="image-badge d-flex justify-content-center align-items-center"
               >
@@ -176,7 +183,7 @@
               </div>
             </div>
             <div class="image-container-2">
-              <img src="./assets/images/WhoWeAre-2.png" alt="" />
+              <img class="hvr-grow-shadow" src="./assets/images/WhoWeAre-2.png" alt="" />
               <div
                 class="image-badge d-flex justify-content-center align-items-center"
               >
@@ -193,7 +200,7 @@
               and a team of dedicated professionals, we ensure your packages
               reach their destination safely and on time, every time.
             </p>
-            <a href="#">Get Started</a>
+            <a href="#booking">Get Started</a>
           </div>
         </div>
       </div>
@@ -204,7 +211,7 @@
       <div class="container">
         <div class="row py-5">
           <div class="col-12">
-            <h2 class="text-center">
+            <h2 class="text-center" data-aos="zoom-in">
               Comprehensive Delivery <br />
               Solutions
             </h2>
@@ -213,7 +220,7 @@
             <div
               class="col-lg-4 col-md-4 col-sm-12 text-center "
             >
-            <div class="solution-card solution-card-color1">
+            <div class="solution-card solution-card-color1 ">
               <img src="./assets/icons/Fast.png" alt="" />
               <h5>Standard Delivery</h5>
               <p>
@@ -225,7 +232,7 @@
             <div
               class="col-lg-4 col-md-4 col-sm-12 text-center "
             >
-            <div class="solution-card solution-card-color2">
+            <div class="solution-card solution-card-color2 ">
               <img src="./assets/icons/Express delivery.png" alt="" />
               <h5>Express Delivery</h5>
               <p>
@@ -237,7 +244,7 @@
             <div
               class="col-lg-4 col-md-4 col-sm-12 text-center "
             >
-            <div class="solution-card solution-card-color3">
+            <div class="solution-card solution-card-color3 ">
               <img src="./assets/icons/Cargo ship.png" alt="" />
               <h5>Overnight Shipping</h5>
               <p>
@@ -249,7 +256,7 @@
             <div
               class="col-md-4 col-sm-12 text-center "
             >
-            <div class="solution-card solution-card-color4">
+            <div class="solution-card solution-card-color4 ">
               <img src="./assets/icons/Logistics.png" alt="" />
               <h5>International Shipping</h5>
               <p>
@@ -261,7 +268,7 @@
             <div
               class="col-md-4 col-sm-12 text-center "
             >
-            <div class="solution-card solution-card-color5">
+            <div class="solution-card solution-card-color5 ">
               <img src="./assets/icons/Delivery truck.png" alt="" />
               <h5>Real-Time Tracking</h5>
               <p>
@@ -288,28 +295,28 @@
               delivery needs and enjoy peace of mind with every package sent.
             </p>
             <div class="row gap-3 mt-4">
-              <div class="col-6 col-sm-6 moveit-card">
+              <div class="col-6 col-sm-6 moveit-card hvr-sweep-to-top">
                 <img src="./assets/icons/Clock.png" alt="" />
                 <h5>Reliable and Fast</h5>
               </div>
-              <div class="col-6 col-sm-6 moveit-card">
+              <div class="col-6 col-sm-6 moveit-card hvr-sweep-to-top">
                 <img src="./assets/icons/Customer service.png" alt="" />
                 <h5>Super Customer Support</h5>
               </div>
             </div>
             <div class="row gap-3 mt-3">
-              <div class="col-6 col-sm-6 moveit-card">
+              <div class="col-6 col-sm-6 moveit-card hvr-sweep-to-top">
                 <img src="./assets/icons/Cyber security.png" alt="" />
                 <h5>Secure Handling</h5>
               </div>
-              <div class="col-6 col-sm-6 moveit-card">
+              <div class="col-6 col-sm-6 moveit-card hvr-sweep-to-top">
                 <img src="./assets/icons/Tag.png" alt="" />
                 <h5>Affordable Rates</h5>
               </div>
             </div>
           </div>
           <div class="col-md-5 col-sm-12">
-            <img src="./assets/images/Layer-1 1.png" alt="" />
+            <img data-aos="fade-left"  data-aos-duration="1800" src="./assets/images/Layer-1 1.png" alt="" />
           </div>
         </div>
       </div>
@@ -469,7 +476,7 @@
               </div>
             </div>
             <p class="card-text">
-             <a href="" class="nav-link">Revolutionizing Delivery: How MoveIt Courier Service Ensures Speed and Reliability</a> 
+             <a href="./articles/article-1.html" class="nav-link">Revolutionizing Delivery: How MoveIt Courier Service Ensures Speed and Reliability</a> 
             </p>
           </div>
         </div>
@@ -489,7 +496,7 @@
               </div>
             </div>
             <p class="card-text">
-            <a href="" class="nav-link"> The Ultimate Guide to Choosing the Right Courier Service: Why MoveIt Stands Out</a>
+            <a href="./articles/article-2.html" class="nav-link"> The Ultimate Guide to Choosing the Right Courier Service: Why MoveIt Stands Out</a>
             </p>
           </div>
         </div>
@@ -521,7 +528,7 @@
             <h2 class="text-center">
               Book Now <br> your parcel
             </h2>
-            <button class="mb-4" >Get Started</button>
+            <a href="#booking"><button class="mb-4" >Get Started</button></a>
           </div>
           
         </div>
@@ -534,7 +541,9 @@
 
 <!-- Track Parcel Section -->
     <section class="container-fluid py-5">
-      <div class="container track-parcel-container ">
+      <div class="container track-parcel-container "
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom">
         <div class="overlay">
           <div class="row align-items-center p-5">
             <div class="col-md-6 col-sm-12 ">
@@ -559,7 +568,7 @@
 
 
     <!-- Footer -->
-     <footer class="container-fluid py-5">
+     <footer class="container-fluid pt-5">
       <div class="container mt-5">
         <div class="row">
         <div class="col-md-8 col-sm-6">
@@ -632,6 +641,9 @@
 
     <!-- Script Linking -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
 
   </body>
 </html>
