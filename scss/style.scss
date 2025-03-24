@@ -112,6 +112,7 @@ body{
 .hero-section{
     margin-top: 80px;
     height: auto;
+    overflow: hidden;
 }
 .hero-section{
     .ht-experience, .ht-with{
@@ -433,6 +434,7 @@ body{
     background-image: url('/assets/images/Vector 3.png');
     background-position: bottom;
     background-repeat: no-repeat;
+    overflow: hidden;
 
 }
 .whymoveit-leftside{
@@ -722,7 +724,7 @@ body{
         border-radius: 16px;
         background: var(--Light-Color-White, #FFF);
     }
-    button{
+    a{
         padding: 12px 24px;
         justify-content: center;
         border-radius: 12px;
@@ -733,6 +735,7 @@ body{
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        text-decoration: none;
     }
 }
 .overlay{

@@ -36,8 +36,7 @@ Moveit is a premium HTML template tailored for courier services, logistics compa
 - Regular and extended license options
 
 ## 🔗 Important Links
-- [Live Preview](https://your-demo-url.com)
-- [Documentation](https://your-docs-url.com)
+- [Live Preview](https://moveit-live.netlify.app/)
 - [Support](abdussamadarefi@gmail.com)
 
 ## 🎯 Perfect For
@@ -57,4 +56,4 @@ Moveit is a premium HTML template tailored for courier services, logistics compa
 
 Start building your professional courier service website today with Moveit!
 
-[Preview Demo](your-demo-link)
+[Preview Demo](https://moveit-live.netlify.app/)
