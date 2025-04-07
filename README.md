@@ -1,9 +1,5 @@
 # Moveit - Modern Courier & Logistics HTML Template
 
-⚠️ **PRIVATE REPOSITORY - COMMERCIAL PROJECT**
-
-This is a premium template. Unauthorized use, distribution, or sharing is strictly prohibited.
-
 ## 🚀 Live Demo
 - [View Demo](your-demo-url.com)
 - [Purchase Template](your-purchase-url.com)
@@ -71,7 +67,6 @@ moveit/
 ## 🤝 Support
 - Email: abdussamadarefi@gmail.com
 - Documentation: [View Docs](./documentation/index.md)
-- Support Period: 6-12 months (based on license)
 
 ## 🙏 Credits
 - Design: Abdul Karim
